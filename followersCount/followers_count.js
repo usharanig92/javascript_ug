@@ -13,3 +13,8 @@ function checkCountValue(){
         alert("your instagram post reached 20 followers")
     }
 }
+
+function resetCount(){
+    document.getElementById('countDisplay').innerText = 0
+    alert("Count has reset to 0")
+}
