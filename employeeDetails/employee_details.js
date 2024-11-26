@@ -1,7 +1,7 @@
 const employees = [
-      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000, specialization: 'javascript'},
+      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, specialization: 'python' },
+      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000, specialization: 'java' },
       //... More employee records can be added here
     ];
 
@@ -24,4 +24,10 @@ function displayHREmployees(){
 function findEmployeeById(id){
     const employee = employees.find(employee => employee.id === id)
     document.getElementById("employeesDetails").innerHTML = `<p>id:${employee.id} name: ${employee.name} age: ${employee.age} department: ${employee.department} salary: ${employee.salary} </p>`
+}
+
+function findEmployeeBySpecialization(specialization){
+    const employee = employees.find(emp => emp.specialization === specialization)
+    document.getElementById("employeesDetails").innerHTML = `<p>id:${employee.id} name: ${employee.name} age: ${employee.age} department: ${employee.department} salary: ${employee.salary} </p>`
+
 }
